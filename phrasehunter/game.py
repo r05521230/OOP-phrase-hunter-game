@@ -59,6 +59,7 @@ class Game:
                     print('')                    
                 
                 user_guess = input(f'\n{5-self.missed} more chances. Guess a letter: ')
+
                 if user_guess in self.guesses:
                     print('\nYou haved guessed this letter.')
                     raise                
@@ -86,14 +87,14 @@ class Game:
             except:
                 print('That is not a valid value. Please try again.')
             else:
-              if again.lower() == 'no':                
-                  print('Bye Have a nice day.\n')
-                  break
-              elif again.lower() == 'yes':
-                  print('OK Try a new noe.')
-                  print('\n=====================\n')
-                  game = Game()
-                  game.start()
-                  break                
-              else:
-                  print('That is not a valid value. Please try again.')
+                if again.lower() == 'no':                
+                    print('Bye Have a nice day.\n')
+                    break
+                elif again.lower() == 'yes':
+                    print('OK Try a new noe.')
+                    print('\n=====================\n')
+                    game = Game()
+                    game.start()
+                    break                
+                else:
+                    print('That is not a valid value. Please try again.')

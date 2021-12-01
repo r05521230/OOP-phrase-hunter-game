@@ -15,7 +15,7 @@ class Phrase:
             elif one in guesses:
                 print(one, end = '')
             else:
-                print('_', end = '')     
+                print('_', end = ' ')
 
     #  checks to see if the letter selected by the user matches a letter in the phrase.
     def check_letter(self, guess):
