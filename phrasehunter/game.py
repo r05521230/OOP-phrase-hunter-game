@@ -60,13 +60,14 @@ class Game:
                 
                 user_guess = input(f'\n{5-self.missed} more chances. Guess a letter: ')
 
-                if user_guess in self.guesses:
+                if user_guess.lower() in self.guesses:
                     print('\nYou haved guessed this letter.')
                     raise                
                 elif len(user_guess) == 1 and user_guess.isalpha():
+                    user_guess = user_guess.lower()
                     return user_guess
                 else:
-                    print('\nThe guess is 1 character in length and that it is only letters: a through z.')
+                    print('\nThe guess is not 1 character in length and that it is only letters: a through z.')
                     raise
             except:                
                 print('Please try again.')
